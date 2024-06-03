@@ -5,6 +5,10 @@ import jakarta.persistence.*;
 import java.sql.Time;
 import java.util.List;
 
+/**
+ * Модель для времени занятий
+ * @autor Dmitry Fugol
+ */
 
 @Entity
 @Table(name = "time_std")

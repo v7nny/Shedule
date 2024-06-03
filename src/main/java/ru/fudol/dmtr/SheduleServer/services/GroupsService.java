@@ -5,19 +5,25 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.fudol.dmtr.SheduleServer.models.Group;
 import ru.fudol.dmtr.SheduleServer.repositories.GroupsRepository;
-
 import java.util.List;
+
+/**
+ * Сервис для групп с CRUD методами
+ * @autor Dmitry Fugol
+ */
 
 @Service
 @Transactional(readOnly = true)
 public class GroupsService {
-
     private final GroupsRepository groupsRepository;
+
 
     @Autowired
     public GroupsService(GroupsRepository groupsRepository) {
         this.groupsRepository = groupsRepository;
     }
+
+
 
     public List<Group> findAll() {
         return groupsRepository.findAll();

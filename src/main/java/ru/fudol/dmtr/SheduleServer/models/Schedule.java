@@ -2,6 +2,11 @@ package ru.fudol.dmtr.SheduleServer.models;
 
 import jakarta.persistence.*;
 
+/**
+ * Модель для расписания
+ * @autor Dmitry Fugol
+ */
+
 @Entity
 @Table(name = "schedule")
 public class Schedule {

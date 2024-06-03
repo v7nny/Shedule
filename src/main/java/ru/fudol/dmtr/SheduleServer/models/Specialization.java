@@ -1,8 +1,12 @@
 package ru.fudol.dmtr.SheduleServer.models;
 
 import jakarta.persistence.*;
-
 import java.util.List;
+
+/**
+ * Модель для специализаций групп
+ * @autor Dmitry Fugol
+ */
 
 @Entity
 @Table(name = "specializations")

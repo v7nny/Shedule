@@ -9,6 +9,10 @@ import ru.fudol.dmtr.SheduleServer.models.Subject;
 import ru.fudol.dmtr.SheduleServer.services.SubjectsService;
 
 import java.util.List;
+/**
+ * Контроллер возвращает список предметов/один предмет
+ * @autor Dmitry Fugol
+ */
 
 @RestController
 @RequestMapping("/subjects")

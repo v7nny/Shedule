@@ -7,11 +7,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.fudol.dmtr.SheduleServer.models.Schedule;
 import ru.fudol.dmtr.SheduleServer.services.SchedulesService;
-
 import java.util.List;
 
+/**
+ * Контроллер возвращает расписание групп/расписание по его id/расписание для группы по её id
+ * @autor Dmitry Fugol
+ */
+
 @RestController
-@RequestMapping("/shedules")
+@RequestMapping("/shedule")
 public class ScheduleController {
 
     private final SchedulesService schedulesService;

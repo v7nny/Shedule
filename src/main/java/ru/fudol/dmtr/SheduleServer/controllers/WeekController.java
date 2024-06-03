@@ -6,19 +6,22 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.fudol.dmtr.SheduleServer.models.Week;
-import ru.fudol.dmtr.SheduleServer.repositories.WeeksRepository;
 import ru.fudol.dmtr.SheduleServer.services.WeeksService;
-
 import java.util.List;
 
+/**
+ * Контроллер возвращает все дни недели/один день недели по его id
+ * @autor Dmitry Fugol
+ */
+
 @RestController
-@RequestMapping("/weeks")
-public class WeeksController {
+@RequestMapping("/week")
+public class WeekController {
 
     private final WeeksService weeksService;
 
     @Autowired
-    public WeeksController(WeeksService weeksService) {
+    public WeekController(WeeksService weeksService) {
         this.weeksService = weeksService;
     }
 

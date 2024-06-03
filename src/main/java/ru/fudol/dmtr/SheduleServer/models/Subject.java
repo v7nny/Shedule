@@ -1,8 +1,12 @@
 package ru.fudol.dmtr.SheduleServer.models;
 
 import jakarta.persistence.*;
-
 import java.util.List;
+
+/**
+ * Модель для предметов
+ * @autor Dmitry Fugol
+ */
 
 @Entity
 @Table(name = "subjects")

@@ -7,8 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.fudol.dmtr.SheduleServer.models.Teacher;
 import ru.fudol.dmtr.SheduleServer.services.TeachersService;
-
 import java.util.List;
+
+/**
+ * Контроллер возвращает список преподавателей/одного преподавателя
+ * @autor Dmitry Fugol
+ */
+
 
 @RestController
 @RequestMapping("/teachers")

@@ -3,7 +3,10 @@ package ru.fudol.dmtr.SheduleServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.sql.Time;
+/**
+ * Мейн класс
+ * @autor Dmitry Fugol
+ */
 
 @SpringBootApplication
 public class SheduleServerApplication {

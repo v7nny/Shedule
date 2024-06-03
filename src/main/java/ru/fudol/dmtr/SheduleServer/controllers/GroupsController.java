@@ -10,11 +10,17 @@ import ru.fudol.dmtr.SheduleServer.services.GroupsService;
 
 import java.util.List;
 
+/**
+ * Контроллер возвращает список групп/один группу
+ * @autor Dmitry Fugol
+ */
+
 @RestController
 @RequestMapping("/groups")
 public class GroupsController {
 
     private final GroupsService groupsService;
+
 
     @Autowired
     public GroupsController(GroupsService groupsService) {

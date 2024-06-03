@@ -9,7 +9,10 @@ import ru.fudol.dmtr.SheduleServer.models.TimeM;
 import ru.fudol.dmtr.SheduleServer.services.TimeService;
 
 import java.util.List;
-
+/**
+ * Контроллер возвращает список с временем начала занятий/время занятия по id
+ * @autor Dmitry Fugol
+ */
 @RestController
 @RequestMapping("/time")
 public class TimeController {

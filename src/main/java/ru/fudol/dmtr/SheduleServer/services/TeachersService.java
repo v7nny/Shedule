@@ -5,8 +5,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.fudol.dmtr.SheduleServer.models.Teacher;
 import ru.fudol.dmtr.SheduleServer.repositories.TeachersRepository;
-
 import java.util.List;
+
+/**
+ * Сервис для преподавателей с CRUD методами
+ * @autor Dmitry Fugol
+ */
 
 @Service
 @Transactional(readOnly = true)

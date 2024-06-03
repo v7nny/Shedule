@@ -7,13 +7,17 @@ import ru.fudol.dmtr.SheduleServer.models.Group;
 import ru.fudol.dmtr.SheduleServer.models.Schedule;
 import ru.fudol.dmtr.SheduleServer.repositories.GroupsRepository;
 import ru.fudol.dmtr.SheduleServer.repositories.SchedulesRepository;
-
 import java.util.List;
+
+/**
+ * Сервис для расписания с CRUD методами
+ * @autor Dmitry Fugol
+ */
+
 
 @Service
 @Transactional(readOnly = true)
 public class SchedulesService {
-
     private final SchedulesRepository schedulesRepository;
 
 
@@ -21,6 +25,7 @@ public class SchedulesService {
     public SchedulesService(SchedulesRepository schedulesRepository) {
         this.schedulesRepository = schedulesRepository;
     }
+
 
 
     public List<Schedule> findAll() {

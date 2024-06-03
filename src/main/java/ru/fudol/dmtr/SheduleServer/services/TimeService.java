@@ -5,8 +5,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.fudol.dmtr.SheduleServer.models.TimeM;
 import ru.fudol.dmtr.SheduleServer.repositories.TimeRepository;
-
 import java.util.List;
+
+/**
+ * Сервис для времени занятий с CRUD методами
+ * @autor Dmitry Fugol
+ */
 
 @Service
 @Transactional(readOnly = true)

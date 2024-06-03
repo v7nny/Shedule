@@ -4,6 +4,11 @@ import jakarta.persistence.*;
 
 import java.util.List;
 
+/**
+ * Модель для преподавателей
+ * @autor Dmitry Fugol
+ */
+
 @Entity
 @Table(name = "teachers")
 public class Teacher {

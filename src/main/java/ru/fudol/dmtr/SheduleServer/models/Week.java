@@ -1,8 +1,12 @@
 package ru.fudol.dmtr.SheduleServer.models;
 
 import jakarta.persistence.*;
-
 import java.util.List;
+
+/**
+ * Модель для дней недели
+ * @autor Dmitry Fugol
+ */
 
 @Entity
 @Table(name = "weeks")

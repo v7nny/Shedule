@@ -5,8 +5,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.fudol.dmtr.SheduleServer.models.Week;
 import ru.fudol.dmtr.SheduleServer.repositories.WeeksRepository;
-
 import java.util.List;
+
+/**
+ * Сервис для дней недели с CRUD методами
+ * @autor Dmitry Fugol
+ */
 
 @Service
 @Transactional(readOnly = true)
@@ -18,6 +22,7 @@ public class WeeksService {
     public WeeksService(WeeksRepository weeksRepository) {
         this.weeksRepository = weeksRepository;
     }
+
 
 
     public List<Week> findAll() {

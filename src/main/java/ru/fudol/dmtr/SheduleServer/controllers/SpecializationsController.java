@@ -7,8 +7,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.fudol.dmtr.SheduleServer.models.Specialization;
 import ru.fudol.dmtr.SheduleServer.services.SpecializationsService;
-
 import java.util.List;
+
+/**
+ * Контроллер возвращает список специализаций/одну специализацию
+ * @autor Dmitry Fugol
+ */
 
 @RestController
 @RequestMapping("/specializations")

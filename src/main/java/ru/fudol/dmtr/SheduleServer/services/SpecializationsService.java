@@ -9,10 +9,14 @@ import ru.fudol.dmtr.SheduleServer.repositories.SpecializationsRepository;
 
 import java.util.List;
 
+/**
+ * Сервис для специализаций групп с CRUD методами
+ * @autor Dmitry Fugol
+ */
+
 @Service
 @Transactional(readOnly = true)
 public class SpecializationsService {
-
     private final SpecializationsRepository specializationsRepository;
 
 

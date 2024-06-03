@@ -3,17 +3,18 @@ package ru.fudol.dmtr.SheduleServer.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ru.fudol.dmtr.SheduleServer.models.Group;
 import ru.fudol.dmtr.SheduleServer.models.Subject;
-import ru.fudol.dmtr.SheduleServer.repositories.GroupsRepository;
 import ru.fudol.dmtr.SheduleServer.repositories.SubjectsRepository;
-
 import java.util.List;
+
+/**
+ * Сервис для предметов с CRUD методами
+ * @autor Dmitry Fugol
+ */
 
 @Service
 @Transactional(readOnly = true)
 public class SubjectsService {
-
     private final SubjectsRepository subjectsRepository;
 
 
