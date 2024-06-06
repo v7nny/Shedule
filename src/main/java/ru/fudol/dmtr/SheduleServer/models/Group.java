@@ -25,7 +25,7 @@ public class Group {
 
     @ManyToOne()
     @JoinColumn(name = "specialization_id", referencedColumnName = "id")
-    private Specialization specializationGr;
+    private Specialization specializationGroup;
 
     @OneToMany(mappedBy = "group")
     private List<Schedule> scheduleList;
@@ -65,12 +65,12 @@ public class Group {
         this.id = id;
     }
 
-    public Specialization getSpecializationGr() {
-        return specializationGr;
+    public Specialization getSpecializationGroup() {
+        return specializationGroup;
     }
 
-    public void setSpecializationGr(Specialization specializationGr) {
-        this.specializationGr = specializationGr;
+    public void setSpecializationGroup(Specialization specializationGroup) {
+        this.specializationGroup = specializationGroup;
     }
 
     @Override

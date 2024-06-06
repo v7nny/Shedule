@@ -23,10 +23,10 @@ public class Specialization {
     @Column(name = "specialization_abbreviation")
     private String specAbbreviation;
 
-    @OneToMany(mappedBy = "specializationGr")
+    @OneToMany(mappedBy = "specializationGroup")
     private List<Group> groupsList;
 
-    @OneToMany(mappedBy = "specializationSb")
+    @OneToMany(mappedBy = "specializationSubjects")
     private List<Subject> subjectList;
 
 

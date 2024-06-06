@@ -29,7 +29,7 @@ public class Subject {
 
     @ManyToOne()
     @JoinColumn(name = "specialization_id", referencedColumnName = "id")
-    private Specialization specializationSb;
+    private Specialization specializationSubjects;
 
     @OneToMany(mappedBy = "subjectFirst")
     private List<Schedule> scheduleFirst;
@@ -86,12 +86,12 @@ public class Subject {
         this.teacher = teacher;
     }
 
-    public Specialization getSpecializationSb() {
-        return specializationSb;
+    public Specialization getSpecializationSubjects() {
+        return specializationSubjects;
     }
 
-    public void setSpecializationSb(Specialization specialization) {
-        this.specializationSb = specialization;
+    public void setSpecializationSubjects(Specialization specializationSubjects) {
+        this.specializationSubjects = specializationSubjects;
     }
 
     @Override
