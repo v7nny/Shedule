@@ -32,8 +32,16 @@ public class GroupsController {
         return groupsService.findAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id:\\d+}")
     public Group getOne(@PathVariable("id") int id) {
         return groupsService.findOne(id);
     }
+
+    @GetMapping("/{name}-{course}")
+    public List<Group> getBySpecializationAndCourse(@PathVariable("name") String name,
+                                                    @PathVariable("course") int course) {
+        return groupsService.findBySpecializationNameAndCourse(name, course);
+    }
+
+
 }

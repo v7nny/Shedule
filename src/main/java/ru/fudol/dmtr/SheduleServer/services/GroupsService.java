@@ -29,6 +29,10 @@ public class GroupsService {
         return groupsRepository.findAll();
     }
 
+    public List<Group> findBySpecializationNameAndCourse(String specializationName, int course) {
+        return groupsRepository.findBySpecializationGroupNameAndCourse(specializationName, course);
+    }
+
     public Group findOne(int id) {
         return groupsRepository.findById(id).orElse(null);
     }
