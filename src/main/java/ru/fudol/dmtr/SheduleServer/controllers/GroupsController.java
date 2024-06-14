@@ -39,9 +39,10 @@ public class GroupsController {
 
     @GetMapping("/{name}-{course}")
     public List<Group> getBySpecializationAndCourse(@PathVariable("name") String name,
-                                                    @PathVariable("course") int course) {
-        return groupsService.findBySpecializationNameAndCourse(name, course);
+                                                    @PathVariable("course") String course) {
+        int courseInt;
+        if(course == null || course.isEmpty()) courseInt = 0;
+        else courseInt = Integer.parseInt(course);
+        return groupsService.findBySpecializationNameAndCourse(name, courseInt);
     }
-
-
 }

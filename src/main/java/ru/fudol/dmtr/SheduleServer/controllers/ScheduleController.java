@@ -15,7 +15,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping("/shedule")
+@RequestMapping("/schedule")
 public class ScheduleController {
 
     private final SchedulesService schedulesService;
@@ -36,7 +36,7 @@ public class ScheduleController {
     }
 
     @GetMapping("/groups/{id}")
-    public List<Schedule> getAllByGroup(@PathVariable("id") int id) {
+    public List<Schedule> getScheduleByGroupId(@PathVariable("id") int id) {
         return schedulesService.findByGroup(id);
     }
 }
