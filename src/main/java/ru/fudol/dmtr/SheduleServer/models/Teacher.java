@@ -18,14 +18,8 @@ public class Teacher {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "teacher_surname")
-    private String lastName;
-
-    @Column(name = "teacher_name")
-    private String firstName;
-
-    @Column(name = "teacher_patronymic")
-    private String patronymic;
+    @Column(name = "full_name")
+    private String fullName;
 
     @OneToMany(mappedBy = "teacher")
     private List<Subject> subjectList;
@@ -34,10 +28,8 @@ public class Teacher {
 
     public Teacher() {}
 
-    public Teacher(String lastName, String firstName, String patronymic) {
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.patronymic = patronymic;
+    public Teacher(String fullName) {
+        this.fullName = fullName;
     }
 
 
@@ -50,37 +42,19 @@ public class Teacher {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getPatronymic() {
-        return patronymic;
-    }
-
-    public void setPatronymic(String patronymic) {
-        this.patronymic = patronymic;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     @Override
     public String toString() {
         return "Teacher{" +
-                "id=" + id +
-                ", lastName='" + lastName + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", patronymic='" + patronymic + '\'' +
+                "fullName='" + fullName + '\'' +
+                ", id=" + id +
                 '}';
     }
 }

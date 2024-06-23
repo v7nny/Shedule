@@ -15,4 +15,5 @@ import java.util.List;
 public interface GroupsRepository extends JpaRepository<Group, Integer> {
     List<Group> findBySpecializationGroupNameAndCourse(String specializationName,
                                                        int course);
+    Group findByNameAndCourse(String name, int course);
 }

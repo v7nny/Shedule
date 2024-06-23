@@ -45,4 +45,11 @@ public class GroupsController {
         else courseInt = Integer.parseInt(course);
         return groupsService.findBySpecializationNameAndCourse(name, courseInt);
     }
+
+    @GetMapping("/{name}&&{course}")
+    public Group getGroupByNameAndCourse(@PathVariable("name") String name,
+                                             @PathVariable("course") int course){
+        return groupsService.findByNameAndCourse(name, course);
+    }
+
 }
