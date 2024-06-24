@@ -27,21 +27,12 @@ public class Subject {
     @JoinColumn(name = "teacher_id", referencedColumnName = "id")
     private Teacher teacher;
 
-    @ManyToOne()
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "specialization_id", referencedColumnName = "id")
     private Specialization specializationSubjects;
 
-    @OneToMany(mappedBy = "subjectFirst")
-    private List<Schedule> scheduleFirst;
-
-    @OneToMany(mappedBy = "subjectSecond")
-    private List<Schedule> scheduleSecond;
-
-    @OneToMany(mappedBy = "subjectThird")
-    private List<Schedule> scheduleThird;
-
-    @OneToMany(mappedBy = "subjectFourth")
-    private List<Schedule> scheduleFourth;
+    @OneToMany(mappedBy = "subject")
+    private List<Schedule> schedule;
 
 
 
@@ -86,13 +77,13 @@ public class Subject {
         this.teacher = teacher;
     }
 
-    public Specialization getSpecializationSubjects() {
-        return specializationSubjects;
-    }
-
-    public void setSpecializationSubjects(Specialization specializationSubjects) {
-        this.specializationSubjects = specializationSubjects;
-    }
+//    public Specialization getSpecializationSubjects() {
+//        return specializationSubjects;
+//    }
+//
+//    public void setSpecializationSubjects(Specialization specializationSubjects) {
+//        this.specializationSubjects = specializationSubjects;
+//    }
 
     @Override
     public String toString() {

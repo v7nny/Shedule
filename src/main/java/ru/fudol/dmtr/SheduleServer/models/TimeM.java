@@ -22,17 +22,8 @@ public class TimeM {
     @Column(name = "hh_mm")
     private Time time;
 
-    @OneToMany(mappedBy = "firstTime")
-    private List<Schedule> scheduleFirst;
-
-    @OneToMany(mappedBy = "secondTime")
-    private List<Schedule> scheduleSecond;
-
-    @OneToMany(mappedBy = "thirdTime")
-    private List<Schedule> scheduleThird;
-
-    @OneToMany(mappedBy = "fourthTime")
-    private List<Schedule> scheduleFourth;
+    @OneToMany(mappedBy = "time")
+    private List<Schedule> schedule;
 
 
     public TimeM() {}

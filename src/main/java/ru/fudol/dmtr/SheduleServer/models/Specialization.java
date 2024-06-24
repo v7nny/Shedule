@@ -21,7 +21,7 @@ public class Specialization {
     private String name;
 
     @Column(name = "specialization_abbreviation")
-    private String specAbbreviation;
+    private String specializationAbbreviation;
 
     @OneToMany(mappedBy = "specializationGroup")
     private List<Group> groupsList;
@@ -34,7 +34,7 @@ public class Specialization {
 
     public Specialization( String name, String specAbbreviation) {
         this.name = name;
-        this.specAbbreviation = specAbbreviation;
+        this.specializationAbbreviation = specAbbreviation;
     }
 
 
@@ -55,12 +55,12 @@ public class Specialization {
         this.name = name;
     }
 
-    public String getSpecAbbreviation() {
-        return specAbbreviation;
+    public String getSpecializationAbbreviation() {
+        return specializationAbbreviation;
     }
 
-    public void setSpecAbbreviation(String specAbbreviation) {
-        this.specAbbreviation = specAbbreviation;
+    public void setSpecializationAbbreviation(String specAbbreviation) {
+        this.specializationAbbreviation = specAbbreviation;
     }
 
 
@@ -69,7 +69,7 @@ public class Specialization {
         return "Specialization{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", specAbbreviation='" + specAbbreviation + '\'' +
+                ", specAbbreviation='" + specializationAbbreviation + '\'' +
                 '}';
     }
 }

@@ -39,4 +39,12 @@ public class ScheduleController {
     public List<Schedule> getScheduleByGroupId(@PathVariable("id") int id) {
         return schedulesService.findByGroup(id);
     }
+
+    @GetMapping("/week/{groupId}-{weekId}-{weekType}")
+    public List<Schedule> getScheduleByGroupIdAndWeekIdAndWeekType(@PathVariable("groupId") int groupId,
+                                                                   @PathVariable("weekId") int weekId,
+                                                                   @PathVariable("weekType") int weekType){
+        return schedulesService.findByGroupAndWeekAndWeekType(groupId, weekId, weekType);
+    }
+
 }

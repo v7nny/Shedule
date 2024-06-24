@@ -40,6 +40,10 @@ public class SchedulesService {
         return schedulesRepository.findByGroupId(id);
     }
 
+    public List<Schedule> findByGroupAndWeekAndWeekType(int groupId, int weekId, int weekType){
+        return schedulesRepository.findByGroupIdAndWeekIdAndWeekType(groupId, weekId, weekType);
+    }
+
     @Transactional
     public void save(Schedule schedule) {
         schedulesRepository.save(schedule);

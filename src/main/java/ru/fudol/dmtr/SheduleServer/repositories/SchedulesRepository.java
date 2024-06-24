@@ -14,4 +14,5 @@ import java.util.List;
 public interface SchedulesRepository extends JpaRepository<Schedule, Integer> {
     //Метод для поиска расписания для конкретной группы по её id
     List<Schedule> findByGroupId(int id);
+    List<Schedule> findByGroupIdAndWeekIdAndWeekType(int groupId, int weekId, int weekType);
 }

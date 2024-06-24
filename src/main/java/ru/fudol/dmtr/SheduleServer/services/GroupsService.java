@@ -33,6 +33,10 @@ public class GroupsService {
         return groupsRepository.findBySpecializationGroupNameAndCourse(specializationName, course);
     }
 
+    public Group findByNameAndCourse(String name, int course) {
+        return groupsRepository.findByNameAndCourse(name, course);
+    }
+
     public Group findOne(int id) {
         return groupsRepository.findById(id).orElse(null);
     }
