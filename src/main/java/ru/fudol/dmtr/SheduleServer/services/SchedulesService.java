@@ -40,8 +40,14 @@ public class SchedulesService {
         return schedulesRepository.findByGroupId(id);
     }
 
-    public List<Schedule> findByGroupAndWeekAndWeekType(int groupId, int weekId, int weekType){
-        return schedulesRepository.findByGroupIdAndWeekIdAndWeekType(groupId, weekId, weekType);
+    public Schedule[][] findByGroupAndWeekType(int groupId, int weekType){
+        Schedule[][] scheduleArray = new Schedule[6][3];
+
+        for(int i = 1; i < 7; i++){
+            scheduleArray[i - 1] = schedulesRepository.findByGroupIdAndWeekIdAndWeekType(groupId, i, weekType);
+        }
+
+        return scheduleArray;
     }
 
     @Transactional
